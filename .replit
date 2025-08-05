@@ -13,3 +13,15 @@ requiredFiles = [".replit", "replit.nix"]
 [deployment]
 run = ["python3", "main.py"]
 deploymentTarget = "cloudrun"
+
+[workflows]
+runButton = "Python"
+
+[[workflows.workflow]]
+name = "Python"
+mode = "sequential"
+author = 45219000
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 Meancalculator/main.py"
